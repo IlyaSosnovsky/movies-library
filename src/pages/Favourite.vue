@@ -1,5 +1,4 @@
 <template>
-  <span>Favourite</span>
 </template>
 
 <script>

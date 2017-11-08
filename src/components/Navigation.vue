@@ -2,24 +2,33 @@
   <nav class="navigation">
       <ul class="navigation__list">
           <li class="navigation__list-item">
-            <router-link to="/" class="navigation__item-link">главная</router-link>
+            <router-link to="/" class="navigation__item-link" exactActiveClass="navigation__item-link--isActive">главная</router-link>
             </li>
           <li class="navigation__list-item">
-            <router-link to="/viewed" class="navigation__item-link">просмотренные</router-link>
+            <router-link to="/viewed" class="navigation__item-link" exactActiveClass="navigation__item-link--isActive">просмотренные</router-link>
             </li>
           <li class="navigation__list-item">
-            <router-link to="/favourite" class="navigation__item-link">избранное</router-link>
+            <router-link to="/favourite" class="navigation__item-link" exactActiveClass="navigation__item-link--isActive">избранное</router-link>
           </li>
       </ul>
   </nav>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
+  },
+  watch: {
+    '$route' (to, from) {
+      this.setCurrentRoute(to.name)
+    }
+  },
+  methods: {
+    ...mapActions(['setCurrentRoute'])
   }
 }
 </script>
@@ -54,6 +63,11 @@ export default {
         padding: 20px 0;
         display:block;
         width:100%;
+
+        &--isActive {
+          background: #303030;
+          color: #fff;
+        }
       }
 
       &__list-item:hover &__item-link {

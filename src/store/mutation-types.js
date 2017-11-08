@@ -1,2 +1,3 @@
 export const INIT_PROFILE = 'INIT_PROFILE'
 export const SET_PROFILE = 'SET_PROFILE'
+export const SET_CURRENT_ROUTE = 'SET_CURRENT_ROUTE'

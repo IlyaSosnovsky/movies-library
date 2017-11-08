@@ -1,6 +1,5 @@
 <template>
   <section class='viewed'>
-    <span>viewed</span>
     <button @click='check'></button>
   </section>
 </template>

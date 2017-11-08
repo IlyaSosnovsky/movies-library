@@ -1,15 +1,17 @@
 <template>
-  <span>home</span>
+    <SearchForm> </SearchForm>
 </template>
 
 <script>
+import SearchForm from '@/components/SearchForm'
 
 export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  components: { SearchForm }
 }
 </script>
 
