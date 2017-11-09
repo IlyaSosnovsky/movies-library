@@ -1,7 +1,7 @@
-import header from './header'
+import viewed from './viewed'
 import currentRoute from './currentRoute'
 
 export default {
-  header,
+  viewed,
   currentRoute
 }
